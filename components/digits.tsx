@@ -29,9 +29,11 @@ function Digits({
           />
         </meshBasicMaterial>
         <BBAnchor anchor={[0, 0, -5]}>
-          <Html center position={[0,0,0]} style={{ color: "white" }}>
-            <div className="w-64 h-36 bg-white opacity-5 rounded-2xl -z-10"></div>
-          </Html>
+          {/* <Html center position={[0,0,0]} style={{ color: "white" }}>
+            <div className="w-[450px] h-56 bg-white opacity-5 rounded-2xl -z-10">
+
+            </div>
+          </Html> */}
         </BBAnchor>
         {children}
       </Text>

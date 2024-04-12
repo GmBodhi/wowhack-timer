@@ -24,7 +24,7 @@ import {
   Object3DEventMap,
 } from "three";
 
-import Devfolio from "../sponsors/Devfolio.svg";
+import Devfolio from "../../sponsors/Devfolio.svg";
 
 const START_TIME = new Date("April 13, 2024 10:00:00 GMT+0530");
 const END_TIME = new Date("April 14, 2024 10:00:00 GMT+0530");
@@ -59,10 +59,6 @@ export default function Home() {
       if (time < 0) {
         if (!isStarted.current) {
           isStarted.current = true;
-          if (plane.current)
-            plane.current.material = new MeshBasicMaterial({
-              color: new Color(0xff0000),
-            });
         }
         time = END_TIME.getTime() - new Date().getTime();
       }
@@ -74,7 +70,28 @@ export default function Home() {
   return (
     <div className="w-screen h-screen">
       <div className="blob"></div>
-      
+      <Canvas>
+        {/* <Plane args={[8, 6]} position={[0, 0, -2]} ref={plane} /> */}
+
+        {/* Prefix */}
+        <Text position={[0, -1.5, 0]} fontSize={0.7}>
+          {isStarted.current
+            ? "Time is ticking..."
+            : "get yourself registered!".toLocaleUpperCase()}
+          <meshBasicMaterial color="#5681c8"></meshBasicMaterial>
+        </Text>
+
+        {/* Digits */}
+        <Digits position={[-4.5, 0, 0]}>
+          {hour ? `${hour.padStart(2, "0")}h` : ""}
+        </Digits>
+        <Digits position={[0, 0, 0]}>
+          {minute ? `${minute.padStart(2, "0")}m` : ""}
+        </Digits>
+        <Digits position={[4.5, 0, 0]}>
+          {second ? `${second.padStart(2, "0")}s` : ""}
+        </Digits>
+      </Canvas>
     </div>
   );
 }
