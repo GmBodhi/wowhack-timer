@@ -2,6 +2,13 @@
 "use client";
 
 import Digits from "@/components/digits";
+import { redirect } from 'next/navigation'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 import {
   Box,
   GradientTexture,
@@ -26,6 +33,13 @@ import {
 
 import Devfolio from "../../sponsors/Devfolio.svg";
 import Sponsors from "@/app/sponsors/page";
+
+//sponsor imports
+import Image1 from 'next/image';
+import Devfolio1 from "../../sponsors/Devfolio.png"
+import Polygon from '../../sponsors/Polygon.png'
+import ETHIndia from "../../sponsors/ethindia.png"
+import { Sponcer } from "@/components/Sponcer";
 
 const START_TIME = new Date("April 13, 2024 10:00:00 GMT+0530");
 const END_TIME = new Date("April 14, 2024 10:00:00 GMT+0530");
@@ -52,6 +66,9 @@ export default function Home() {
 
   console.log(Devfolio);
 
+
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       // Update the time every 1000ms
@@ -65,12 +82,16 @@ export default function Home() {
       }
       setTime(time);
     }, 1000);
+    setTimeout(() => {
+      redirect('/sponsors')
+    }, 2000)
     return () => clearInterval(interval);
+    
   });
 
   return (
     <div className="w-screen h-screen">
-          <div className="blob"></div>
+          
       <Canvas>
         {/* <Plane args={[8, 6]} position={[0, 0, -2]} ref={plane} /> */}
 
@@ -78,7 +99,7 @@ export default function Home() {
         <Text position={[0, -1.5, 0]} fontSize={0.7}>
           {isStarted.current
             ? "Time is ticking..."
-            : "get yourself registered!".toLocaleUpperCase()}
+            : "Time is ticking...".toLocaleUpperCase()}
           <meshBasicMaterial color="#5681c8"></meshBasicMaterial>
         </Text>
 
@@ -93,6 +114,7 @@ export default function Home() {
           {second ? `${second.padStart(2, "0")}s` : ""}
         </Digits>
       </Canvas>
+      <Sponcer></Sponcer>
     </div>
   );
 }
