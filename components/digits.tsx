@@ -3,6 +3,7 @@ import {
   Center,
   Edges,
   GradientTexture,
+  Html,
   Plane,
   Text,
 } from "@react-three/drei";
@@ -18,22 +19,23 @@ function Digits({
 }) {
   return (
     <group position={position} rotation={[0, 0, 0]}>
-      <Plane args={[2.5, 1.3]} rotation={rotation}>
-        {/* <Center> */}
-        <BBAnchor anchor={[0, 0, 0]}>
-          <Text fontSize={1} rotation={rotation} textAlign="center">
-            <meshBasicMaterial>
-              <GradientTexture
-                stops={[0, 1]}
-                colors={["blue", "red"]}
-                size={1024}
-              />
-            </meshBasicMaterial>
-            {children}
-          </Text>
+      {/* <Center> */}
+      <Text fontSize={2} rotation={rotation} textAlign="center">
+        <meshBasicMaterial>
+          <GradientTexture
+            stops={[0, 1]}
+            colors={["blue", "red"]}
+            size={1024}
+          />
+        </meshBasicMaterial>
+        <BBAnchor anchor={[0, 0, -5]}>
+          <Html center position={[0,0,0]} style={{ color: "white" }}>
+            <div className="w-64 h-36 bg-white opacity-5 rounded-2xl -z-10"></div>
+          </Html>
         </BBAnchor>
-        {/* </Center> */}
-      </Plane>
+        {children}
+      </Text>
+      {/* </Center> */}
     </group>
   );
 }

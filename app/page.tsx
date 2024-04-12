@@ -8,6 +8,7 @@ import {
   GradientType,
   Plane,
   Text,
+  Image,
   Text3D,
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
@@ -23,9 +24,7 @@ import {
   Object3DEventMap,
 } from "three";
 
-function Material() {
-  return <meshBasicMaterial></meshBasicMaterial>;
-}
+import Devfolio from "../sponsors/Devfolio.svg";
 
 const START_TIME = new Date("April 13, 2024 10:00:00 GMT+0530");
 const END_TIME = new Date("April 14, 2024 10:00:00 GMT+0530");
@@ -50,6 +49,8 @@ export default function Home() {
   const minute = "" + Math.floor((time % 3600000) / 60000);
   const second = "" + Math.floor((time % 60000) / 1000);
 
+  console.log(Devfolio);
+
   useEffect(() => {
     const interval = setInterval(() => {
       // Update the time every 1000ms
@@ -72,23 +73,24 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen">
+      <div className="blob"></div>
       <Canvas>
         {/* <Plane args={[8, 6]} position={[0, 0, -2]} ref={plane} /> */}
 
         {/* Prefix */}
-        <Text position={[0, -1.5, 0]} fontSize={0.5}>
-          {isStarted.current ? "Ends In" : "Starts In"}
+        <Text position={[0, -1.2, 0]} fontSize={0.7}>
+          {isStarted.current ? "Time is ticking..." : "get registered!".toLocaleUpperCase()}
           <meshBasicMaterial color="#5681c8"></meshBasicMaterial>
         </Text>
 
         {/* Digits */}
-        <Digits position={[-3, -2.5, 0]}>
+        <Digits position={[-4, 0, 0]}>
           {hour ? `${hour.padStart(2, "0")}h ` : ""}
         </Digits>
-        <Digits position={[0, -2.5, 0]}>
+        <Digits position={[0, 0, 0]}>
           {minute ? `${minute.padStart(2, "0")}m ` : ""}
         </Digits>
-        <Digits position={[3, -2.5, 0]}>
+        <Digits position={[4, 0, 0]}>
           {second ? `${second.padStart(2, "0")}s` : ""}
         </Digits>
       </Canvas>
