@@ -8,7 +8,7 @@ export const Sponsors = () => {
   return (
     <div className="h-screen  w-full flex justify-center items-center">
             <div className="m-3 md:w-[70%]">
-                <h1 className="text-4xl mb-12">Our Sponsors</h1>
+                <h1 className="text-4xl flex justify-center items-center mb-12">Our Sponsors</h1>
                 <div className="">
                     {/* Make a grid like panel 2 in a row and place a few logos */}
                     <div className="grid grid-cols-2 gap-10">
