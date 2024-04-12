@@ -74,7 +74,6 @@ export default function Home() {
   return (
     <div className="w-screen h-screen">
       <div className="blob"></div>
-      
     </div>
   );
 }
