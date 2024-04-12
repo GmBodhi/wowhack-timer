@@ -26,6 +26,7 @@ import {
 
 import Devfolio from "../sponsors/Devfolio.svg";
 
+
 const START_TIME = new Date("April 13, 2024 10:00:00 GMT+0530");
 const END_TIME = new Date("April 14, 2024 10:00:00 GMT+0530");
 
