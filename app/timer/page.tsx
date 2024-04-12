@@ -25,6 +25,7 @@ import {
 } from "three";
 
 import Devfolio from "../../sponsors/Devfolio.svg";
+import Sponsors from "@/app/sponsors/page";
 
 const START_TIME = new Date("April 13, 2024 10:00:00 GMT+0530");
 const END_TIME = new Date("April 14, 2024 10:00:00 GMT+0530");
@@ -69,7 +70,7 @@ export default function Home() {
 
   return (
     <div className="w-screen h-screen">
-      <div className="blob"></div>
+          <div className="blob"></div>
       <Canvas>
         {/* <Plane args={[8, 6]} position={[0, 0, -2]} ref={plane} /> */}
 

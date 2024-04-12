@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image';
-import Devfolio from "../sponsors/Devfolio.png"
-import Polygon from '../sponsors/Polygon.png'
-import ETHIndia from "../sponsors/ethindia.png"
+import Devfolio from "../../sponsors/Devfolio.png"
+import Polygon from '../../sponsors/Polygon.png'
+import ETHIndia from "../../sponsors/ethindia.png"
 
-export const sponcers = () => {
+export const Sponsors = () => {
   return (
     <div className="h-screen  w-full flex justify-center items-center">
             <div className="m-3 md:w-[70%]">
@@ -33,3 +33,6 @@ export const sponcers = () => {
         </div>
   )
 }
+
+
+export default Sponsors;

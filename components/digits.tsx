@@ -20,7 +20,7 @@ function Digits({
   return (
     <group position={position} rotation={[0, 0, 0]}>
       {/* <Center> */}
-      <Text fontSize={2} rotation={rotation} textAlign="center">
+      <Text fontSize={1.5} rotation={rotation} textAlign="center">
         <meshBasicMaterial>
           <GradientTexture
             stops={[0, 1]}
