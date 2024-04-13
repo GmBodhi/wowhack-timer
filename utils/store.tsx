@@ -1,13 +1,9 @@
-// import { create } from "zustand";
+import { create, createStore } from "zustand";
 
-// export const useStore = create<{
-//   time: number;
-//   isStarted: boolean;
-//   setTime: (time: number) => void;
-//   setStarted: (isStarted: boolean) => void;
-// }>()((set) => ({
-//   time: 0,
-//   setTime: (time: number) => set({ time }),
-//   isStarted: false,
-//   setStarted: (isStarted: boolean) => set({ isStarted }),
-// }));
+export const useStore = create<{
+  adActive: boolean;
+  setAdActive: (adActive: boolean) => void;
+}>((set) => ({
+  adActive: true,
+  setAdActive: (adActive) => set({ adActive }),
+}));

@@ -29,6 +29,16 @@ body {
   }
 }
 
+.text-gradient{
+  background: linear-gradient(47deg,
+      rgba(255, 88, 139, 1) 21%,
+      rgb(0 164 173) 67%,
+      rgba(118, 74, 166, 1) 81%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .blob {
   position: absolute;
   top: 50%;
@@ -38,7 +48,7 @@ body {
   width: 800px;
   aspect-ratio: 1/1;
   animation: animate 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite alternate forwards;
-  filter: blur(120px);
+  filter: blur(80px);
   z-index: -1;
   background: linear-gradient(47deg,
       rgba(255, 88, 139, 1) 21%,
