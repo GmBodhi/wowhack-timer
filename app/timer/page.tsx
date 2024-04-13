@@ -63,14 +63,14 @@ export default function Home() {
       <Image1
         src={GDSC}
         alt="DEVFOLIO LOGO"
-        className={`transition-all ${"my-1 mt-12 -mb-6 py-1 w-80"} relative left-1/2 -translate-x-1/2`}
+        className={`transition-all ${"my-1 mt-16 -mb-6 py-1 w-[26rem]"} relative left-1/2 -translate-x-1/2`}
       />
 
       <Sponcer style={{}} adActive={adActive} setAd={setAdActive} />
       {/* <div>
         {isStarted.current ? "Time is ticking..." : "Time is ticking..."}
       </div> */}
-      <div className=" text-white absolute text-gradient font-normal left-1/2 top-1/2 mt-60 -translate-y-1/2 -translate-x-1/2 w-min">
+      <div className=" text-white absolute text-gradient font-normal left-1/2 top-1/2 mt-64 -translate-y-1/2 -translate-x-1/2 w-min">
         <div className={""}>
           <h1 className="inline p-4 rounded-2xl m-3 text-[12rem]">
             {hour ? `${hour.padStart(2, "0")}h` : ""}
