@@ -19,7 +19,7 @@ import GDSC from "@/sponsors/image.png";
 import { Sponcer } from "@/components/Sponcer";
 import { useStore } from "@/utils/store";
 
-const START_TIME = new Date("April 12, 2024 10:00:00 GMT+0530");
+const START_TIME = new Date("April 13, 2024 10:00:00 GMT+0530");
 const END_TIME = new Date("April 14, 2024 10:00:00 GMT+0530");
 
 export default function Home() {
