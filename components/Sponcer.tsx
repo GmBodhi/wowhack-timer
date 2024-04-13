@@ -12,7 +12,7 @@ import iedc from "../sponsors/iedc_final_rm.png";
 import care from "../sponsors/care resize.png";
 import { useStore } from "@/utils/store";
 
-export const Sponcer = ({
+export function Sponcer({
   style,
   adActive,
   setAd,
@@ -20,7 +20,7 @@ export const Sponcer = ({
   adActive: boolean;
   style: any;
   setAd: (ad: boolean) => void;
-}) => {
+}) {
   return (
     <div
       className={` flex justify-center items-center ${""}`}
@@ -88,4 +88,4 @@ export const Sponcer = ({
       </div>
     </div>
   );
-};
+}
