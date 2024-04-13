@@ -72,7 +72,7 @@ export default function Home() {
         src={GDSC}
         alt="DEVFOLIO LOGO"
         className={`transition-all ${
-           "my-1 mt-5 py-1 w-80"
+           "my-1 mt-12 -mb-6 py-1 w-80"
         } relative left-1/2 -translate-x-1/2`}
       />
 
