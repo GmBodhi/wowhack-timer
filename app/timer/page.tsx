@@ -63,6 +63,7 @@ export default function Home() {
     }, 60 * 1000);
 
     return () => clearInterval(timeout);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

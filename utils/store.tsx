@@ -4,6 +4,6 @@ export const useStore = create<{
   adActive: boolean;
   setAdActive: (adActive: boolean) => void;
 }>((set) => ({
-  adActive: true,
+  adActive: false,
   setAdActive: (adActive) => set({ adActive }),
 }));
