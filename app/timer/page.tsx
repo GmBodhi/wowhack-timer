@@ -71,7 +71,7 @@ export default function Home() {
       <Image1
         src={GDSC}
         alt="DEVFOLIO LOGO"
-        className="w-96 my-16  py-5 relative left-1/2 -translate-x-1/2"
+        className="w-[30rem] my-16  py-5 relative left-1/2 -translate-x-1/2"
       />
 
       {/* <Sponcer style={{}} adActive={adActive} setAd={setAdActive} /> */}
