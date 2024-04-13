@@ -56,24 +56,14 @@ export default function Home() {
     return () => [interval].forEach(clearInterval);
   });
 
-  useEffect(() => {
-    const timeout = setInterval(() => {
-      useStore.setState({ adActive: true });
-      console.log(adActive);
-    }, 15 * 1000);
-
-    return () => clearInterval(timeout);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+ 
 
   return (
     <div className={`w-screen h-screen overflow-x-hidden overflow-y-hidden`}>
       <Image1
         src={GDSC}
         alt="DEVFOLIO LOGO"
-        className={`transition-all ${
-           "my-1 mt-12 -mb-6 py-1 w-80"
-        } relative left-1/2 -translate-x-1/2`}
+        className={`transition-all ${"my-1 mt-12 -mb-6 py-1 w-80"} relative left-1/2 -translate-x-1/2`}
       />
 
       <Sponcer style={{}} adActive={adActive} setAd={setAdActive} />

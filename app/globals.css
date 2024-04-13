@@ -30,10 +30,10 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(47deg,
+  background: linear-gradient(0deg,
       #cf3f35 14%,
       #3e80e9 28%,
-      /* #e8aa08 42%, */
+      #e8aa08 42%,
       #109755 57%,
       #e8aa08 71%,
       #3e80e9 85%,
@@ -50,15 +50,15 @@ body {
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 100%;
   }
 
   50% {
-    background-position: 100% 50%;
+    background-position: 0% 0%;
   }
 
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 100%;
   }
 }
 
