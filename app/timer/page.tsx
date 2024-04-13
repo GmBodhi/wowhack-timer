@@ -7,32 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-import {
-  Box,
-  GradientTexture,
-  GradientType,
-  Plane,
-  Text,
-  Image,
-  Text3D,
-} from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { use, useEffect, useRef, useState } from "react";
-import {
-  BufferGeometry,
-  Color,
-  Mesh,
-  MeshBasicMaterial,
-  NormalBufferAttributes,
-  PlaneGeometry,
-  Material,
-  Object3DEventMap,
-} from "three";
 
 import Devfolio from "../../sponsors/Devfolio.svg";
-import Sponsors from "@/app/sponsors/page";
 
 //sponsor imports
 import Image1 from "next/image";
