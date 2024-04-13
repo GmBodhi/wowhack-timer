@@ -59,8 +59,8 @@ export default function Home() {
   useEffect(() => {
     const timeout = setInterval(() => {
       useStore.setState({ adActive: true });
-      // console.log(adActive);
-    }, 60 * 1000);
+      console.log(adActive);
+    }, 15 * 1000);
 
     return () => clearInterval(timeout);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -71,14 +71,16 @@ export default function Home() {
       <Image1
         src={GDSC}
         alt="DEVFOLIO LOGO"
-        className="w-[30rem] my-16 py-5 pt-12 relative left-1/2 -translate-x-1/2"
+        className={`transition-all ${
+           "my-1 mt-5 py-1 w-80"
+        } relative left-1/2 -translate-x-1/2`}
       />
 
-      {/* <Sponcer style={{}} adActive={adActive} setAd={setAdActive} /> */}
+      <Sponcer style={{}} adActive={adActive} setAd={setAdActive} />
       {/* <div>
         {isStarted.current ? "Time is ticking..." : "Time is ticking..."}
       </div> */}
-      <div className=" text-white absolute text-gradient font-normal left-1/2 top-1/2 mt-44 -translate-y-1/2 -translate-x-1/2 w-min">
+      <div className=" text-white absolute text-gradient font-normal left-1/2 top-1/2 mt-60 -translate-y-1/2 -translate-x-1/2 w-min">
         <div className={""}>
           <h1 className="inline p-4 rounded-2xl m-3 text-[12rem]">
             {hour ? `${hour.padStart(2, "0")}h` : ""}
